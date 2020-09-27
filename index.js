@@ -12,5 +12,35 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(tutorial=>{
+    return tutorial
+    .split(' ')
+    .map(word=> word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+  })
 }
+
+console.log(titleCased())
+
+// let players = ['kobe', 'pau', 'lamar', 'derek', 'ron']
+// let team = players.map(function(student){
+//   return student + ' the champion'
+// })
+// let team = players.map(student=> student + ' the champion')
+// console.log(team)
+
+// const robots = [
+//   { name: 'Johnny 5', modes: 5, isActivated: false, },
+//   { name: 'C3PO', modes: 3, isActivated: false, },
+//   { name: 'Sonny', modes: 2.5, isActivated: false, },
+//   { name: 'Baymax', modes: 1.5, isActivated: false, },
+// ];
+
+// const activatedRobots = robots.map(function (robot) {
+//   return Object.assign({}, robot, {
+//     modes: robot.modes * 2,
+//     isActivated: true,
+//   });
+// });
+
+// console.log(activatedRobots);
